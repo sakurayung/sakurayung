@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm Ross from Davao City, I am currently 2nd Year in Bachelor of Science in Computer Science.<br>I like discovering new things in tech and experiencing them. <br>Currently working on my skills.<br>
+I'm Ross from Davao City, I am currently 2nd Year in Bachelor of Science in Computer Science.<br>I like discovering new things in tech and experiencing them. <br>Currently working on front-end!.<br>
 
 
 ## 🌐 Socials:
