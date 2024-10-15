@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm Ross from Davao City, I am currently 3nd Year in Bachelor of Science in Computer Science.<br>I like discovering new things in tech and experiencing them. <br>Currently working on front-end!.<br>
+I'm Ross from Davao City, I am currently 3nd Year in Bachelor of Science in Computer Science. I like discovering new things in tech and experiencing them. Currently working on front-end.
 
 
 ## 🌐 Socials:
@@ -12,10 +12,5 @@ I'm Ross from Davao City, I am currently 3nd Year in Bachelor of Science in Comp
 ![](https://github-readme-streak-stats.herokuapp.com/?user=sakurayung&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=sakurayung&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
-
----
-[![](https://visitcount.itsvg.in/api?id=sakurayung&icon=0&color=0)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
