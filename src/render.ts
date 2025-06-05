@@ -221,8 +221,8 @@ export const main = (props: Props & Main) => {
 			font-size: 18px;
 			font-weight: 300;
 			position: relative;
-			margin-top: -5px;
-			overflow: hidden;
+			margin-top: -15px;
+			overflow: visible;
 		}
 
 		.intro span {
@@ -265,7 +265,7 @@ export const main = (props: Props & Main) => {
 		.graph {
 			--delay: var(--animate-in-graph-delay);
 			grid-area: 2 / 1 / span 1 / span 6;
-			margin-top: -10px;
+			margin-top: -5px;
 		}
 
 		.years {
