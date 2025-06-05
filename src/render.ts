@@ -223,6 +223,7 @@ export const main = (props: Props & Main) => {
 			position: relative;
 			margin-top: -15px;
 			overflow: visible;
+			max-width: 100%;
 		}
 
 		.intro span {
@@ -265,7 +266,7 @@ export const main = (props: Props & Main) => {
 		.graph {
 			--delay: var(--animate-in-graph-delay);
 			grid-area: 2 / 1 / span 1 / span 6;
-			margin-top: -5px;
+			margin-top: -10px;
 		}
 
 		.years {
