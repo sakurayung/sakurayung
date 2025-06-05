@@ -221,8 +221,8 @@ export const main = (props: Props & Main) => {
 			font-size: 18px;
 			font-weight: 300;
 			position: relative;
-			margin-top: -25px;
 		}
+
 		.intro span {
 			contain: content;
 			--duration: 980ms;
@@ -250,20 +250,20 @@ export const main = (props: Props & Main) => {
 
 		@media (width > ${BP_MEDIUM}px) {
 			.intro {
-				grid-area: 1 / 1.5 / span 1 / span 4;
+				grid-area: 1 / 1 / span 1 / span 4;
 				font-size: 22px;
 			}
 		}
 		@media (width > ${BP_LARGE}px) {
 			.intro {
-				grid-area: 1 / 2 / span 1 / span 3;
+				grid-area: 1 / 1 / span 1 / span 3;
 			}
 		}
 
 		.graph {
 			--delay: var(--animate-in-graph-delay);
 			grid-area: 2 / 1 / span 1 / span 6;
-			margin-top: -10px;
+			margin-top: -5px;
 		}
 
 		.years {
