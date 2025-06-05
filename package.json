@@ -1,5 +1,5 @@
 {
-  "name": "terkelg",
+  "name": "sakurayung",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -19,5 +19,8 @@
     "typescript": "^5.5.3",
     "wrangler": "^3.63.0"
   },
-  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+  "dependencies": {
+     "dotenv": "^16.4.0"
+  },
+   "packageManager": "pnpm@10.6.5"
 }
