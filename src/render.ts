@@ -206,12 +206,13 @@ export const main = (props: Props & Main) => {
 			--size-year-gap: ${props.year.gap};
 			--size-label-height: 20;
 			--duration: 360;
+			--typing-speed: 50ms; /* 50ms per character */
 		}
 
 		.wrapper {
 			align-items: flex-end;
 			grid-template-rows: 1fr auto;
-			row-gap: 20px;
+			row-gap: 10px;
 		}
 
 		.intro {
@@ -219,6 +220,8 @@ export const main = (props: Props & Main) => {
 			grid-area: 1 / 1 / span 1 / span 6;
 			font-size: 18px;
 			font-weight: 300;
+			position: relative;
+			margin-top: -25px;
 		}
 		.intro span {
 			contain: content;
@@ -226,21 +229,41 @@ export const main = (props: Props & Main) => {
 			--delay: calc(var(--animate-in-copy-delay) + var(--i) * 10ms);
 		}
 
+		.intro span.char {
+			contain: content;
+    		opacity: 0;
+    		animation: type-in 0.1s ease-in-out forwards;
+    		animation-delay: calc(var(--animate-in-copy-delay) + var(--i) * var(--typing-speed));
+		}
+
+		.intro .cursor {
+			display: inline-block;
+			width: 0.5em;
+			height: 1.2em;
+    		background-color: var(--color-text);
+    		margin-left: 2px;
+    		vertical-align: middle;
+    		animation: blink 1s step-end infinite;
+    		animation-delay: calc(var(--animate-in-copy-delay) + ${BODY_COPY.length} * var(--typing-speed) + 0.5s);
+    		opacity: 0;
+		}
+
 		@media (width > ${BP_MEDIUM}px) {
 			.intro {
-				grid-area: 1 / 3 / span 1 / span 4;
+				grid-area: 1 / 1.5 / span 1 / span 4;
 				font-size: 22px;
 			}
 		}
 		@media (width > ${BP_LARGE}px) {
 			.intro {
-				grid-area: 1 / 4 / span 1 / span 3;
+				grid-area: 1 / 2 / span 1 / span 3;
 			}
 		}
 
 		.graph {
 			--delay: var(--animate-in-graph-delay);
 			grid-area: 2 / 1 / span 1 / span 6;
+			margin-top: -10px;
 		}
 
 		.years {
@@ -263,12 +286,31 @@ export const main = (props: Props & Main) => {
 			animation-fill-mode: both, both;
 			animation-delay: 2s, var(--animate-in-graph-delay);
 		}
+
 		@keyframes scroll {
 			0% {
 				transform: translateX(60px);
 			}
 			100% {
 				transform: translateX(calc(-100% + 100cqw));
+			}
+		}
+
+		@keyframes type-in {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}	
+		}
+
+		@keyframes blink {
+			0%, 100% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
 			}
 		}
 
@@ -333,8 +375,8 @@ export const main = (props: Props & Main) => {
 		<main class="wrapper grid">
 			<article class="intro">
 				<p>${BODY_COPY.split('')
-          .map((c, i) => `<span class="fade-in" style="--i: ${i};">${c}</span>`)
-          .join('')}</p>
+          .map((c, i) => `<span class="char" style="--i: ${i};">${c}</span>`)
+          .join('')}<span class="cursor"></span></p>
 			</article>
 			<article class="graph">
 				<div class="years" style="--w: ${props.length}; --h: ${props.sizes[0][1]};">
