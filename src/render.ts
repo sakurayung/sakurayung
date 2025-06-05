@@ -2,7 +2,7 @@ import type { Year } from './worker';
 
 const BP_MEDIUM = 550;
 const BP_LARGE = 700;
-const BODY_COPY = `I'm Joross Pacturan—a curious and adaptable tech enthusiast with a passion for \nlearning new concepts and mastering cutting-edge technologies.`;
+const BODY_COPY = `I'm Joross Pacturan—a curious and adaptable tech enthusiast with a passion for learning new concepts and mastering cutting-edge technologies.`;
 
 interface Props {
   width?: number;
