@@ -1,7 +1,6 @@
 import { fallback, link, main, top } from './render.js';
 import data from './stats.json';
 
-
 //@ts-nocheck
 export type Year = {
   from: string;

@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises';
 import type { Year } from '../src/worker';
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 
 export const START_DATE = new Date();
 START_DATE.setFullYear(START_DATE.getFullYear() - 4);
@@ -55,7 +55,7 @@ export async function request(date: { from?: Date; to?: Date }) {
 		}
 		`,
     variables: {
-      username: "sakurayung",
+      username: 'sakurayung',
       from: date.from?.toISOString(),
       to: date.to?.toISOString()
     }
@@ -63,16 +63,14 @@ export async function request(date: { from?: Date; to?: Date }) {
   const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      "User-Agent": "sakurayung/readme",
+      'Content-Type': 'application/json',
+      'User-Agent': 'sakurayung/readme',
       Authorization: `bearer ${process.env.GH_SECRET}`
     },
     body: JSON.stringify(body)
   }).then((res) => res.json() as Promise<Response>);
   if (!response.data || !response.data.user) {
-    throw new Error(
-      `Failed to fetch contributions: ${JSON.stringify(response)}`
-    );
+    throw new Error(`Failed to fetch contributions: ${JSON.stringify(response)}`);
   }
   const calender = response.data.user.contributionsCollection.contributionCalendar;
   const weeks = calender.weeks;
