@@ -221,6 +221,8 @@ export const main = (props: Props & Main) => {
 			font-size: 18px;
 			font-weight: 300;
 			position: relative;
+			margin-top: -5px;
+			overflow: hidden;
 		}
 
 		.intro span {
@@ -263,7 +265,7 @@ export const main = (props: Props & Main) => {
 		.graph {
 			--delay: var(--animate-in-graph-delay);
 			grid-area: 2 / 1 / span 1 / span 6;
-			margin-top: -5px;
+			margin-top: -10px;
 		}
 
 		.years {
@@ -459,11 +461,11 @@ export const top = (props: Props & { contributions: number }) => {
 
   const html = /*html*/ `
 		<div class="wrapper grid label">
-			<div class="menu fade-in">Menu</div>
+			<div class="menu fade-in">my socials.</div>
 			<div class="contributions fade-in">
-				<span class="shine">${(props.contributions / 1000).toFixed(1)}k</span> Contributions
+				<span class="shine">${(props.contributions / 1000).toFixed(1)}k</span> contributions so far.
 			</div>
-			<div class="readme fade-in">readme.md</div>
+			<div class="readme fade-in">README.md</div>
 		</div>
 	`;
 
