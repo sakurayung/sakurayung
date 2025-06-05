@@ -64,7 +64,7 @@ export async function request(date: { from?: Date; to?: Date }) {
     headers: {
       'Content-Type': 'application/json',
       'User-Agent': 'sakurayung/readme',
-      Authorization: `bearer ${process.env.API_TOKEN_GITHUB}`
+      Authorization: `bearer ${process.env.GH_SECRET}`
     },
     body: JSON.stringify(body)
   }).then((res) => res.json() as Promise<Response>);
