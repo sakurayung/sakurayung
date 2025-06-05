@@ -69,10 +69,6 @@ export async function request(date: { from?: Date; to?: Date }) {
     body: JSON.stringify(body)
   }).then((res) => res.json() as Promise<Response>);
   console.log('API Response:', JSON.stringify(response, null, 2));
-
-  if (!response.data?.user) {
-    throw new Error('No user data found in the response. Check your API token and username.');
-  }
   const calender = response.data.user.contributionsCollection.contributionCalendar;
   const weeks = calender.weeks;
   return { weeks, contributions: calender.totalContributions };
