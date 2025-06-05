@@ -2,7 +2,7 @@ import type { Year } from './worker';
 
 const BP_MEDIUM = 550;
 const BP_LARGE = 700;
-const BODY_COPY = `I'm Joross Pacturan—a curious and adaptable tech enthusiast with a passion for learning new concepts and mastering cutting-edge technologies.`;
+const BODY_COPY = `I'm Joross Pacturan—a curious and adaptable tech enthusiast with a passion for learning.`;
 
 interface Props {
   width?: number;
@@ -221,9 +221,6 @@ export const main = (props: Props & Main) => {
 			font-size: 18px;
 			font-weight: 300;
 			position: relative;
-			margin-top: -15px;
-			overflow: visible;
-			max-width: 100%;
 		}
 
 		.intro span {
@@ -266,7 +263,6 @@ export const main = (props: Props & Main) => {
 		.graph {
 			--delay: var(--animate-in-graph-delay);
 			grid-area: 2 / 1 / span 1 / span 6;
-			margin-top: -10px;
 		}
 
 		.years {
